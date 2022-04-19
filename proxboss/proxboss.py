@@ -21,8 +21,16 @@ import math
 _PROXIES = []
 
 def main(proxy_path: str, threads: int, timeout: int, output, url: str) -> None:
+    print("""
+   ___               _        
+  / _ \_ __ _____  _| |__   ___  ___ ___ 
+ / /_)/ '__/ _ \ \/ / '_ \ / _ \/ __/ __|
+/ ___/| | | (_) >  <| |_) | (_) \__ \__ \\
+\/    |_|  \___/_/\_\_.__/ \___/|___/___/           
+""")
+
     if not os.path.isfile(proxy_path):
-        print(f"File cannot be found: {proxy_path}")
+        print(f"[!] File cannot be found: {proxy_path}")
         return
     
     with open(proxy_path, 'r') as f:
